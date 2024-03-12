@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Application de messages</h1>
+  <input type="url" placeholder="Base Url" id='input-baseUrl' />
+  <button onclick='changeBaseUrl()'>Changer d'url</button>
+  <ul id="messages-list">
+    <li>message 1</li>
+    <li>message 1</li>
+    <li>message 1</li>
+    <li>message 1</li>
+    <li>message 1</li>
+  </ul>
+  <textarea id="text-area" placeholder="Entrez votre message"></textarea>
+  <button onclick='postMessage()'>Ajouter un message</button>
+</body>
+<script src="script.js"></script>
+
+</html>
