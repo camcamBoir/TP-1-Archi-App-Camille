@@ -4,8 +4,10 @@ h1{
 }
 
 li{
+  display: flex;
   color: blue;
   margin-top: 10px;
+  justify-content: space-between;
 }
 
 textarea{
@@ -18,3 +20,44 @@ button{
   background-color: green;
   color: white;
 }
+
+li button {
+    background-color: red; /* Set the background color to red */
+    color: white; /* Set text color to white for better visibility */
+    padding: 5px 10px; /* Add padding for better appearance */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Add pointer cursor to indicate button is clickable */
+}
+
+/* Add some margin to the delete button */
+li button:hover {
+    background-color: darkred; /* Change background color on hover */
+}
+
+.add-button{
+  display: block;
+  background-color: #719fee;
+  border-radius: 10px;
+  border: 4px #1f69ec;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.add-button:hover{
+  background-color: #ffffff;
+  border: 2px solid #1f69ec;
+  box-shadow: 10px 5px 5px #719fee;
+  color: #1f69ec;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+Resources

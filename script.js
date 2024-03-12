@@ -28,9 +28,15 @@ function update(messages) {
   document.getElementById('messages-list').innerHTML = '';
 
   messages.forEach(function(message) {
-    console.log('dans update', message)
     let li = document.createElement('li');
     li.textContent = message.msg;
+    let deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Supprimer';
+    deleteButton.addEventListener('click', function() {
+      deleteMessage(messages.indexOf(message));
+      li.remove();
+    });
+    li.appendChild(deleteButton);
     document.getElementById('messages-list').appendChild(li);
   });
 }
@@ -64,5 +70,12 @@ function getAllMessages() {
 function changeBaseUrl() {
   baseUrl = document.getElementById('input-baseUrl').value;
 };
+
+function deleteMessage(index) {
+  fetch(baseUrl + 'msg/del/' + index)
+    .then(function(response) {
+      return response.json();
+    })
+}
 
 getAllMessages();
