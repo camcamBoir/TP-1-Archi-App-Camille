@@ -57,6 +57,7 @@ function postMessage() {
 }
 
 function getAllMessages() {
+  console.log('dans getAllMessages');
   fetch(baseUrl + 'msg/getAll')
     .then(function(response) {
       return response.json();
@@ -69,6 +70,7 @@ function getAllMessages() {
 
 function changeBaseUrl() {
   baseUrl = document.getElementById('input-baseUrl').value;
+  getAllMessages();
 };
 
 function deleteMessage(index) {
